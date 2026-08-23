@@ -831,6 +831,52 @@
       height: 14px;
     }
 
+    /* Google Scholar CTA */
+    .scholar-cta {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .scholar-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 28px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 100px;
+      color: #ffffff;
+      text-decoration: none;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all var(--transition);
+    }
+
+    .scholar-link:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(0, 212, 255, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 212, 255, 0.15);
+    }
+
+    .scholar-link svg:first-child {
+      color: var(--accent-cyan);
+    }
+
+    .scholar-link svg:last-child {
+      width: 14px;
+      height: 14px;
+      transition: transform var(--transition);
+    }
+
+    .scholar-link:hover svg:last-child {
+      transform: translate(2px, -2px);
+    }
+
     /* =========================================================
        SKILLS
        ========================================================= */
@@ -956,6 +1002,119 @@
     .teach-detail {
       color: var(--text-secondary);
       font-size: 0.92rem;
+    }
+
+    /* =========================================================
+       WORK EXPERIENCE (in About section)
+       ========================================================= */
+    .experience-block {
+      margin-top: 48px;
+    }
+
+    .block-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+      padding-left: 14px;
+      border-left: 3px solid var(--accent-cyan);
+    }
+
+    .exp-item {
+      padding: 20px 24px;
+      margin-bottom: 16px;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .exp-role {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--text-primary);
+    }
+
+    .exp-org {
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      margin-top: 2px;
+    }
+
+    .exp-meta {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.82rem;
+      color: var(--accent-cyan);
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+
+    .exp-desc {
+      color: var(--text-secondary);
+      font-size: 0.93rem;
+      line-height: 1.55;
+    }
+
+    /* =========================================================
+       CERTIFICATIONS
+       ========================================================= */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .cert-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 22px 24px;
+    }
+
+    .cert-icon {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(168, 85, 247, 0.15));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--accent-cyan);
+    }
+
+    .cert-body {
+      flex: 1;
+    }
+
+    .cert-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+      line-height: 1.4;
+    }
+
+    .cert-issuer {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+    .cert-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-family: 'Space Grotesk', sans-serif;
+      letter-spacing: 0.02em;
     }
 
     /* =========================================================
@@ -1208,6 +1367,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#patents">Patents</a></li>
+        <li><a href="#certifications">Certs</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#teaching">Teaching</a></li>
         <li><a href="#blog">Blog</a></li>
@@ -1325,6 +1485,30 @@
           </div>
         </div>
       </div>
+
+      <div class="experience-block reveal">
+        <h3 class="block-title">Work Experience</h3>
+        <div class="exp-item glass-card">
+          <div class="exp-header">
+            <div>
+              <div class="exp-role">Research Assistant</div>
+              <div class="exp-org">Amirkabir University of Technology &mdash; Tehran Polytechnic</div>
+            </div>
+            <div class="exp-meta">Sep 2020 &ndash; Present</div>
+          </div>
+          <p class="exp-desc">Researching fault tolerance, distributed systems, blockchain consensus algorithms, and reinforcement learning under the supervision of Prof. Hamid Reza Zarandi.</p>
+        </div>
+        <div class="exp-item glass-card">
+          <div class="exp-header">
+            <div>
+              <div class="exp-role">Security &amp; Data Analyst</div>
+              <div class="exp-org">Center for Information Technology &amp; Communications (CIC), Amirkabir University</div>
+            </div>
+            <div class="exp-meta">Jul 2024 &ndash; Present</div>
+          </div>
+          <p class="exp-desc">Leveraging data science techniques to identify and mitigate security risks through pattern discovery and anomaly detection in extensive datasets and logs. Specializing in proactive monitoring of network traffic, security assessments, audits, and intrusion prevention using Splunk and Zeek.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1348,7 +1532,7 @@
             <li>Balanced security and performance against selfish mining and Eclipse attacks</li>
             <li>Reduced median block propagation time and stale block rate</li>
           </ul>
-          <a href="#" class="card-link">
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S2210537925001532" target="_blank" rel="noopener" class="card-link">
             Read paper
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M7 17L17 7"></path><polyline points="7 7 17 7 17 17"></polyline>
@@ -1366,7 +1550,7 @@
             <li>Validated with Garnet 2.0 simulator; tested 3x3 to 8x8 networks</li>
             <li>Achieved 18.0001 cycles average latency on 4x4 mesh</li>
           </ul>
-          <a href="#" class="card-link">
+          <a href="https://www.springerprofessional.de/en/simultaneous-optimization-of-network-on-chip-to-improve-reliabil/51370836" target="_blank" rel="noopener" class="card-link">
             Read paper
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M7 17L17 7"></path><polyline points="7 7 17 7 17 17"></polyline>
@@ -1384,7 +1568,7 @@
             <li>Optimized node placement and interconnections</li>
             <li>Achieved 20.2% reduction in communication overhead</li>
           </ul>
-          <a href="#" class="card-link">
+          <a href="https://ieeexplore.ieee.org/iel8/10967264/10967397/10967452.pdf" target="_blank" rel="noopener" class="card-link">
             Read paper
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M7 17L17 7"></path><polyline points="7 7 17 7 17 17"></polyline>
@@ -1392,10 +1576,20 @@
           </a>
         </article>
       </div>
+
+      <div class="scholar-cta reveal">
+        <a href="https://scholar.google.com/citations?user=kJj4Y1IAAAAJ&hl=en" target="_blank" rel="noopener" class="scholar-link">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+            <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.8 3.9L12 19.3l7.2-5.9L24 9.5 12 0z"/>
+          </svg>
+          <span>View all publications on Google Scholar</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 17L17 7"></path><polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
-
-  <!-- ============== PATENTS ============== -->
   <section id="patents">
     <div class="container">
       <div class="section-header reveal">
@@ -1427,6 +1621,63 @@
             <li>Each PE paired with consensus module validating via PBFT</li>
             <li>Dynamically purging and reconfiguring around faulty units</li>
           </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CERTIFICATIONS ============== -->
+  <section id="certifications">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Certifications</span>
+        <h2 class="section-title">Licenses &amp; credentials</h2>
+        <p class="section-subtitle">Verified certifications in machine learning, Linux administration, and security.</p>
+      </div>
+
+      <div class="certs-grid">
+        <article class="cert-card glass-card reveal">
+          <div class="cert-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <div class="cert-body">
+            <div class="cert-title">Sample-based Learning Methods</div>
+            <div class="cert-issuer">University of Alberta</div>
+            <div class="cert-meta">Issued Aug 2026 &middot; ID 2TCKMPW4F3HZ</div>
+          </div>
+        </article>
+
+        <article class="cert-card glass-card reveal reveal-delay-1">
+          <div class="cert-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <div class="cert-body">
+            <div class="cert-title">Fundamentals of Reinforcement Learning</div>
+            <div class="cert-issuer">University of Alberta</div>
+            <div class="cert-meta">Issued Jul 2026 &middot; ID TD97B3ZEJ0UQ</div>
+          </div>
+        </article>
+
+        <article class="cert-card glass-card reveal reveal-delay-2">
+          <div class="cert-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+              <path d="M3 9h18M9 21V9"></path>
+            </svg>
+          </div>
+          <div class="cert-body">
+            <div class="cert-title">Certified Linux Administrator (LPIC-1)</div>
+            <div class="cert-issuer">Linux Professional Institute (LPI)</div>
+            <div class="cert-meta">Issued Sep 2016 &middot; ID LPI000366613</div>
+          </div>
         </article>
       </div>
     </div>
