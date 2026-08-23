@@ -1063,32 +1063,49 @@
     }
 
     /* =========================================================
-       CERTIFICATIONS
+       CERTIFICATIONS (vertical list)
        ========================================================= */
-    .certs-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+    .certs-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      max-width: 760px;
+      margin: 0 auto;
     }
 
     .cert-card {
       display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      padding: 22px 24px;
+      align-items: center;
+      gap: 18px;
+      padding: 16px 20px;
     }
 
-    .cert-icon {
+    .cert-logo {
       flex-shrink: 0;
-      width: 52px;
-      height: 52px;
-      border-radius: 14px;
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(168, 85, 247, 0.15));
+      background: rgba(255, 255, 255, 0.04);
       border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .cert-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cert-logo-text {
+      background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(168, 85, 247, 0.15));
       color: var(--accent-cyan);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
     }
 
     .cert-body {
@@ -1098,23 +1115,124 @@
     .cert-title {
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 0.98rem;
       color: var(--text-primary);
-      margin-bottom: 4px;
+      margin-bottom: 3px;
       line-height: 1.4;
     }
 
     .cert-issuer {
       color: var(--text-secondary);
-      font-size: 0.9rem;
-      margin-bottom: 6px;
+      font-size: 0.86rem;
+      margin-bottom: 4px;
     }
 
     .cert-meta {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: var(--text-muted);
       font-family: 'Space Grotesk', sans-serif;
       letter-spacing: 0.02em;
+    }
+
+    /* =========================================================
+       PROJECTS
+       ========================================================= */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      padding: 22px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .project-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(0, 212, 255, 0.12), rgba(168, 85, 247, 0.12));
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      color: var(--accent-cyan);
+      margin-bottom: 4px;
+    }
+
+    .project-date {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.78rem;
+      color: var(--accent-pink);
+      letter-spacing: 0.04em;
+    }
+
+    .project-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text-primary);
+      line-height: 1.35;
+    }
+
+    .project-desc {
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    /* =========================================================
+       HONORS
+       ========================================================= */
+    .honors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .honor-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 22px 24px;
+    }
+
+    .honor-rank {
+      flex-shrink: 0;
+      min-width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(236, 72, 153, 0.18), rgba(168, 85, 247, 0.18));
+      border: 1px solid rgba(236, 72, 153, 0.2);
+      color: var(--accent-pink);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .honor-body {
+      flex: 1;
+    }
+
+    .honor-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+
+    .honor-detail {
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      line-height: 1.55;
     }
 
     /* =========================================================
@@ -1367,10 +1485,11 @@
         <li><a href="#about">About</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#patents">Patents</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#honors">Honors</a></li>
         <li><a href="#certifications">Certs</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#teaching">Teaching</a></li>
-        <li><a href="#blog">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -1626,23 +1745,201 @@
     </div>
   </section>
 
+  <!-- ============== PROJECTS ============== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Projects</span>
+        <h2 class="section-title">Research &amp; engineering portfolio</h2>
+        <p class="section-subtitle">A selection of research projects, freelance work, and side builds spanning systems, ML, and security.</p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card glass-card reveal">
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 10h18M8 4v6"/>
+            </svg>
+          </div>
+          <div class="project-date">Aug 2023</div>
+          <h3 class="project-title">PoW Blockchain Implementation</h3>
+          <p class="project-desc">Built a complete blockchain from scratch using Proof-of-Work consensus algorithm in Python.</p>
+        </article>
+
+        <article class="project-card glass-card reveal reveal-delay-1">
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 10h18M8 4v6"/>
+            </svg>
+          </div>
+          <div class="project-date">Dec 2022</div>
+          <h3 class="project-title">PBFT Voting-Based Blockchain</h3>
+          <p class="project-desc">Implemented a blockchain using Practical Byzantine Fault Tolerance voting-based consensus algorithm.</p>
+        </article>
+
+        <article class="project-card glass-card reveal reveal-delay-2">
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 4h18v6H3z"/><path d="M3 14h18v6H3z"/><circle cx="7" cy="7" r="1" fill="currentColor"/><circle cx="7" cy="17" r="1" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="project-date">Oct 2021</div>
+          <h3 class="project-title">64-bit UNIX-like OS from Scratch</h3>
+          <p class="project-desc">Implemented a 64-bit UNIX-like operating system from scratch, based on the MIT 6.828 JOS framework.</p>
+        </article>
+
+        <article class="project-card glass-card reveal reveal-delay-3">
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22V12h6v10"/>
+            </svg>
+          </div>
+          <div class="project-date">Sep 2021</div>
+          <h3 class="project-title">FPGA Parking System (HW/SW Co-design)</h3>
+          <p class="project-desc">Implemented a parking system using FPGA and hardware/software co-design in Xilinx Vivado.</p>
+        </article>
+
+        <article class="project-card glass-card reveal">
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <div class="project-date">Jan 2021</div>
+          <h3 class="project-title">Python Compiled-Code Compiler</h3>
+          <p class="project-desc">Developed a simple compiled-code compiler with Python, covering lexer, parser, and code generation.</p>
+        </article>
+
+        <article class="project-card glass-card reveal reveal-delay-1">
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <div class="project-date">Jan 2021</div>
+          <h3 class="project-title">Event-Driven Compiler</h3>
+          <p class="project-desc">Developed a simple event-driven compiler with Python, supporting event-based code generation.</p>
+        </article>
+
+        <article class="project-card glass-card reveal reveal-delay-2">
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2L2 7v6c0 5 4 9 10 9s10-4 10-9V7l-10-5z"/>
+            </svg>
+          </div>
+          <div class="project-date">Feb 2019</div>
+          <h3 class="project-title">Four OWASP-Nettacker Plugins</h3>
+          <p class="project-desc">Developed four security scanner plugins (NFS, SMB, FTP, IoT/CCTV) for OWASP-Nettacker as Bachelor's project.</p>
+        </article>
+
+        <article class="project-card glass-card reveal reveal-delay-3">
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="3"/><path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/>
+            </svg>
+          </div>
+          <div class="project-date">Nov 2018</div>
+          <h3 class="project-title">3D-Map Generator with Kinect &amp; ROS</h3>
+          <p class="project-desc">Developed a 3D-map generator using Microsoft Kinect sensor and Robot Operating System (ROS).</p>
+        </article>
+
+        <article class="project-card glass-card reveal">
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="3"/><path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/>
+            </svg>
+          </div>
+          <div class="project-date">Oct 2018</div>
+          <h3 class="project-title">Object Detection with YOLO &amp; OpenCV</h3>
+          <p class="project-desc">Developed object detection using OpenCV library, YOLO algorithm, and Python for real-time vision tasks.</p>
+        </article>
+
+        <article class="project-card glass-card reveal reveal-delay-1">
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="3"/><path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/>
+            </svg>
+          </div>
+          <div class="project-date">Oct 2018</div>
+          <h3 class="project-title">Path Planning Algorithm in ROS</h3>
+          <p class="project-desc">Developed a path planning algorithm and embedded it in ROS for a rescue robot navigation system.</p>
+        </article>
+
+        <article class="project-card glass-card reveal reveal-delay-2">
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 12h4l3-9 4 18 3-9h4"/>
+            </svg>
+          </div>
+          <div class="project-date">Dec 2018</div>
+          <h3 class="project-title">Routing Algorithm with Genetic Algorithm</h3>
+          <p class="project-desc">Developed a routing algorithm using a genetic algorithm for an Artificial Intelligence course project.</p>
+        </article>
+
+        <article class="project-card glass-card reveal reveal-delay-3">
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <div class="project-date">Jan 2016</div>
+          <h3 class="project-title">C Compiler in C++</h3>
+          <p class="project-desc">Implemented a simple C compiler for synthesis of C code using C++, covering front-end and code generation.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== HONORS ============== -->
+  <section id="honors">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Honors</span>
+        <h2 class="section-title">Awards &amp; achievements</h2>
+        <p class="section-subtitle">Recognition in academic rankings and competitive exams.</p>
+      </div>
+
+      <div class="honors-grid">
+        <article class="honor-card glass-card reveal">
+          <div class="honor-rank">#3</div>
+          <div class="honor-body">
+            <div class="honor-title">Ranked 3rd among MSc peers</div>
+            <div class="honor-detail">Among 13 peer M.Sc. students in Computer Engineering &mdash; Computer Architecture, Amirkabir University of Technology.</div>
+          </div>
+        </article>
+
+        <article class="honor-card glass-card reveal reveal-delay-1">
+          <div class="honor-rank">#190</div>
+          <div class="honor-body">
+            <div class="honor-title">Ranked 190th in nation-wide university entrance</div>
+            <div class="honor-detail">Among 20,000&ndash;25,000 participants in the Iranian nation-wide M.Sc. entrance exam for Computer Engineering.</div>
+          </div>
+        </article>
+
+        <article class="honor-card glass-card reveal reveal-delay-2">
+          <div class="honor-rank"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a6 6 0 0 1 12 0v2"/></svg></div>
+          <div class="honor-body">
+            <div class="honor-title">Head of Python Programming Team</div>
+            <div class="honor-detail">Member of Urmia University of Technology Robotics Team, leading the Python programming sub-team.</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- ============== CERTIFICATIONS ============== -->
   <section id="certifications">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">Certifications</span>
         <h2 class="section-title">Licenses &amp; credentials</h2>
-        <p class="section-subtitle">Verified certifications in machine learning, Linux administration, and security.</p>
+        <p class="section-subtitle">Verified certifications in machine learning, Linux administration, networking, and security.</p>
       </div>
 
-      <div class="certs-grid">
+      <div class="certs-list">
         <article class="cert-card glass-card reveal">
-          <div class="cert-icon">
-            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-              <path d="M2 17l10 5 10-5"></path>
-              <path d="M2 12l10 5 10-5"></path>
-            </svg>
+          <div class="cert-logo">
+            <img src="assets/alberta.jpg" alt="University of Alberta" loading="lazy" />
           </div>
           <div class="cert-body">
             <div class="cert-title">Sample-based Learning Methods</div>
@@ -1652,12 +1949,8 @@
         </article>
 
         <article class="cert-card glass-card reveal reveal-delay-1">
-          <div class="cert-icon">
-            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-              <path d="M2 17l10 5 10-5"></path>
-              <path d="M2 12l10 5 10-5"></path>
-            </svg>
+          <div class="cert-logo">
+            <img src="assets/alberta.jpg" alt="University of Alberta" loading="lazy" />
           </div>
           <div class="cert-body">
             <div class="cert-title">Fundamentals of Reinforcement Learning</div>
@@ -1667,16 +1960,57 @@
         </article>
 
         <article class="cert-card glass-card reveal reveal-delay-2">
-          <div class="cert-icon">
-            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="3" y="3" width="18" height="18" rx="2"></rect>
-              <path d="M3 9h18M9 21V9"></path>
-            </svg>
+          <div class="cert-logo">
+            <img src="assets/lpi.jpg" alt="Linux Professional Institute" loading="lazy" />
           </div>
           <div class="cert-body">
             <div class="cert-title">Certified Linux Administrator (LPIC-1)</div>
             <div class="cert-issuer">Linux Professional Institute (LPI)</div>
             <div class="cert-meta">Issued Sep 2016 &middot; ID LPI000366613</div>
+          </div>
+        </article>
+
+        <article class="cert-card glass-card reveal reveal-delay-3">
+          <div class="cert-logo cert-logo-text">
+            <span>CCNA</span>
+          </div>
+          <div class="cert-body">
+            <div class="cert-title">CCNA Routing &amp; Switching</div>
+            <div class="cert-issuer">Cando Training Center</div>
+            <div class="cert-meta">Issued Apr 2016</div>
+          </div>
+        </article>
+
+        <article class="cert-card glass-card reveal">
+          <div class="cert-logo cert-logo-text">
+            <span>NET+</span>
+          </div>
+          <div class="cert-body">
+            <div class="cert-title">Network+ Certified</div>
+            <div class="cert-issuer">Sharif University of Technology (LAITEC)</div>
+            <div class="cert-meta">Issued Feb 2016</div>
+          </div>
+        </article>
+
+        <article class="cert-card glass-card reveal reveal-delay-1">
+          <div class="cert-logo cert-logo-text">
+            <span>ISMS</span>
+          </div>
+          <div class="cert-body">
+            <div class="cert-title">ISMS Auditor (ISO 19011:2011 / ISO/IEC 27001:2013)</div>
+            <div class="cert-issuer">Batis Academy</div>
+            <div class="cert-meta">Issued Jan 2017</div>
+          </div>
+        </article>
+
+        <article class="cert-card glass-card reveal reveal-delay-2">
+          <div class="cert-logo cert-logo-text">
+            <span>MR</span>
+          </div>
+          <div class="cert-body">
+            <div class="cert-title">Modern Robotics: Mechanics, Planning, and Control</div>
+            <div class="cert-issuer">Coursera Specialization</div>
+            <div class="cert-meta">Issued &mdash;</div>
           </div>
         </article>
       </div>
