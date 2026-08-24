@@ -814,6 +814,38 @@
     .pub-collapsible[open] > summary .label-open { display: inline; }
     .pub-collapsible > summary .label-closed { display: inline; }
 
+    /* BibTeX toggle (same pattern as abstract) */
+    .pub-bibtex-details > summary.bibtex-toggle {
+      list-style: none;
+      cursor: pointer;
+      padding: 9px 14px;
+      font-family: var(--font-sans);
+      font-size: 0.84rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      user-select: none;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+      transition: background var(--transition), color var(--transition);
+    }
+    .pub-bibtex-details > summary.bibtex-toggle:hover { background: var(--surface-strong); color: var(--text-primary); }
+    .pub-bibtex-details > summary.bibtex-toggle::-webkit-details-marker { display: none; }
+    .pub-bibtex-details > summary.bibtex-toggle .chev {
+      display: inline-flex;
+      transition: transform var(--transition);
+      color: var(--accent);
+    }
+    .pub-bibtex-details[open] > summary.bibtex-toggle .chev { transform: rotate(90deg); }
+    .pub-bibtex-details > summary.bibtex-toggle .label-open { display: none; }
+    .pub-bibtex-details[open] > summary.bibtex-toggle .label-closed { display: none; }
+    .pub-bibtex-details[open] > summary.bibtex-toggle .label-open { display: inline; }
+    .pub-bibtex-details > summary.bibtex-toggle .label-closed { display: inline; }
+    .pub-bibtex-details[open] { border: 0; background: transparent; }
+
     .pub-abstract {
       padding: 0 16px 14px;
       font-family: var(--font-serif);
@@ -1666,7 +1698,11 @@
           </details>
 
           <details class="pub-bibtex-details" style="margin-top:10px;">
-            <summary style="display:none;"></summary>
+            <summary class="bibtex-toggle">
+              <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+              <span class="label-closed">Show BibTeX</span>
+              <span class="label-open">Hide BibTeX</span>
+            </summary>
             <div class="pub-bibtex">
               <div class="pub-bibtex-header">
                 <span class="label">BibTeX</span>
@@ -1746,7 +1782,11 @@
           </details>
 
           <details class="pub-bibtex-details" style="margin-top:10px;">
-            <summary style="display:none;"></summary>
+            <summary class="bibtex-toggle">
+              <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+              <span class="label-closed">Show BibTeX</span>
+              <span class="label-open">Hide BibTeX</span>
+            </summary>
             <div class="pub-bibtex">
               <div class="pub-bibtex-header">
                 <span class="label">BibTeX</span>
@@ -1828,7 +1868,11 @@
           </details>
 
           <details class="pub-bibtex-details" style="margin-top:10px;">
-            <summary style="display:none;"></summary>
+            <summary class="bibtex-toggle">
+              <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+              <span class="label-closed">Show BibTeX</span>
+              <span class="label-open">Hide BibTeX</span>
+            </summary>
             <div class="pub-bibtex">
               <div class="pub-bibtex-header">
                 <span class="label">BibTeX</span>
@@ -2268,7 +2312,7 @@
         <div class="cert">
           <div class="cert-logo"><img src="assets/alberta.jpg" alt="University of Alberta logo" loading="lazy" /></div>
           <div class="cert-body">
-            <div class="cert-title">Sample-based Learning Methods</div>
+            <div class="cert-title"><a href="https://www.coursera.org/account/accomplishments/verify/2TCKMPW4F3HZ" target="_blank" rel="noopener">Sample-based Learning Methods</a></div>
             <div class="cert-meta">University of Alberta &middot; ID 2TCKMPW4F3HZ</div>
           </div>
         </div>
@@ -2276,7 +2320,7 @@
         <div class="cert">
           <div class="cert-logo"><img src="assets/alberta.jpg" alt="University of Alberta logo" loading="lazy" /></div>
           <div class="cert-body">
-            <div class="cert-title">Fundamentals of Reinforcement Learning</div>
+            <div class="cert-title"><a href="https://www.coursera.org/account/accomplishments/verify/TD97B3ZEJ0UQ" target="_blank" rel="noopener">Fundamentals of Reinforcement Learning</a></div>
             <div class="cert-meta">University of Alberta &middot; ID TD97B3ZEJ0UQ</div>
           </div>
         </div>
@@ -2284,7 +2328,7 @@
         <div class="cert">
           <div class="cert-logo"><img src="assets/lpi.jpg" alt="Linux Professional Institute logo" loading="lazy" /></div>
           <div class="cert-body">
-            <div class="cert-title">Certified Linux Administrator (LPIC-1)</div>
+            <div class="cert-title"><a href="https://cs.lpi.org/caf/Xamman/certification/verify/LPI000366613/5sc4pncul5" target="_blank" rel="noopener">Certified Linux Administrator (LPIC-1)</a></div>
             <div class="cert-meta">Linux Professional Institute &middot; ID LPI000366613</div>
           </div>
         </div>
@@ -2669,10 +2713,7 @@
         }
       }
 
-      // ---------- Publication BibTeX details: keep details with hidden summary always open ----------
-      // We used <details> with display:none summary; force them open so the BibTeX box always shows.
-      var bibtexDetails = document.querySelectorAll('.pub-bibtex-details');
-      bibtexDetails.forEach(function (d) { d.setAttribute('open', ''); });
+      // ---------- Publication BibTeX: keep collapsed by default, click to expand ----------
 
     })();
   </script>
