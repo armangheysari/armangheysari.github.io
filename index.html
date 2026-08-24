@@ -343,6 +343,23 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
+    /* Justify all body text paragraphs for even line lengths */
+    .research-statement p,
+    .pub-abstract,
+    .post-body,
+    .post-body p,
+    .exp-desc,
+    .honor-detail,
+    .project-desc,
+    .talk-desc,
+    .edu-meta,
+    .section-subtitle {
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+    }
+
     /* =========================================================
        SUBTLE BACKGROUND (very faint, slow)
        ========================================================= */
