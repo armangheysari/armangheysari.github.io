@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0a0e1a" />
-  <meta name="description" content="Arman Gheysari, Computer Engineering researcher at Amirkabir University of Technology. Research on hardware fault tolerance, PBFT, blockchain, and safe RL." />
+  <meta name="description" content="Arman Gheysari, researcher bridging Byzantine fault tolerance and modern machine learning. Work on Byzantine-robust federated learning, multi-objective optimization for ML systems, and safe reinforcement learning for safety-critical distributed systems." />
   <meta name="author" content="Arman Gheysari" />
-  <meta name="keywords" content="Arman Gheysari, fault tolerance, System-on-Chip, blockchain, Byzantine fault tolerance, PBFT, reinforcement learning, Network-on-Chip, genetic algorithm, Amirkabir University of Technology, computer architecture, distributed systems, hardware security, NSGA-II" />
+  <meta name="keywords" content="Arman Gheysari, Byzantine fault tolerance, Byzantine-robust machine learning, federated learning, safe reinforcement learning, PBFT, distributed machine learning, multi-objective optimization, NSGA-II, genetic algorithm, Network-on-Chip, System-on-Chip, blockchain, reinforcement learning, Amirkabir University of Technology, computer architecture, distributed systems, hardware security, PyTorch, Stable Baselines3" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href="https://armangheysari.github.io/" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Arman Gheysari, Computer Engineering Researcher" />
-  <meta property="og:description" content="Computer Engineering researcher at Amirkabir University of Technology. Research on hardware fault tolerance, PBFT, blockchain, and safe reinforcement learning." />
+  <meta property="og:description" content="Researcher bridging Byzantine fault tolerance and modern machine learning. Byzantine-robust federated learning, multi-objective optimization for ML systems, and safe reinforcement learning for safety-critical distributed systems." />
   <meta property="og:type" content="profile" />
   <meta property="og:url" content="https://armangheysari.github.io/" />
   <meta property="og:image" content="https://armangheysari.github.io/assets/profile.jpg" />
@@ -28,11 +28,11 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Arman Gheysari, Computer Engineering Researcher" />
-  <meta name="twitter:description" content="Computer Engineering researcher at Amirkabir University of Technology. Research on hardware fault tolerance, PBFT, blockchain, and safe reinforcement learning." />
+  <meta name="twitter:description" content="Researcher bridging Byzantine fault tolerance and modern machine learning. Byzantine-robust federated learning, multi-objective optimization for ML systems, and safe reinforcement learning for safety-critical distributed systems." />
   <meta name="twitter:image" content="https://armangheysari.github.io/assets/profile.jpg" />
   <meta name="twitter:image:alt" content="Arman Gheysari, Computer Engineering Researcher" />
 
-  <title>Arman Gheysari, Computer Engineering Researcher, Amirkabir</title>
+  <title>Arman Gheysari — Byzantine Fault Tolerance & Machine Learning Research</title>
 
   <!-- JSON-LD: Person schema (primary entity on this page) -->
   <script type="application/ld+json">
@@ -58,16 +58,23 @@
       "https://scholar.google.com/citations?user=kJj4Y1IAAAAJ&hl=en"
     ],
     "knowsAbout": [
-      "Fault Tolerance",
-      "Blockchain",
+      "Byzantine Fault Tolerance",
+      "Byzantine-Robust Machine Learning",
+      "Federated Learning",
+      "Safe Reinforcement Learning",
+      "Distributed Machine Learning",
+      "Multi-objective Optimization",
+      "NSGA-II",
+      "Genetic Algorithm",
       "Reinforcement Learning",
       "Distributed Systems",
       "Network-on-Chip",
       "System-on-Chip",
-      "Genetic Algorithm",
       "PBFT",
-      "Byzantine Fault Tolerance",
-      "Hardware Security"
+      "Blockchain",
+      "Hardware Security",
+      "PyTorch",
+      "Stable Baselines3"
     ]
   }
   </script>
@@ -203,7 +210,7 @@
         "name": "Who is Arman Gheysari?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Arman Gheysari is a Computer Engineering researcher and MSc graduate in Computer Architecture from Amirkabir University of Technology in Tehran. His work spans hardware fault tolerance, blockchain consensus, and reinforcement learning for safety-critical distributed systems."
+          "text": "Arman Gheysari is a Computer Engineering researcher and MSc graduate in Computer Architecture from Amirkabir University of Technology in Tehran. His work bridges classical distributed systems safety (Byzantine fault tolerance, PBFT consensus) with modern machine learning (Byzantine-robust federated learning, safe reinforcement learning, multi-objective optimization for ML systems)."
         }
       },
       {
@@ -211,7 +218,7 @@
         "name": "What does Arman Gheysari research?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "He researches hardware-level fault tolerance in System-on-Chip architectures, blockchain-based trust and PBFT consensus for safety-critical hardware, and reinforcement learning for adaptive mitigation in fault-tolerant distributed systems. He also works on multi-objective optimization of Network-on-Chip designs."
+          "text": "He researches Byzantine fault tolerance in System-on-Chip architectures (extending PBFT consensus into silicon, with per-core blockchains), Byzantine-robust federated learning (defending distributed ML training against malicious workers in the spirit of Krum and Bulyan), multi-objective optimization of Network-on-Chip designs using NSGA-II, and safe offline-to-online reinforcement learning for fault-tolerant distributed systems."
         }
       },
       {
@@ -1380,6 +1387,131 @@
     .chip:hover { border-color: var(--accent); color: var(--accent); }
 
     /* =========================================================
+       COURSEWORK & SELF-STUDY
+       ========================================================= */
+    .coursework-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .coursework-item {
+      padding: 16px 20px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+    .coursework-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+    .coursework-title {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.0rem;
+      color: var(--text-primary);
+    }
+    .coursework-provider {
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+    .coursework-desc {
+      font-family: var(--font-serif);
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .coursework-status {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      padding: 2px 8px;
+      border-radius: 3px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    .coursework-status.completed {
+      background: rgba(52, 211, 153, 0.12);
+      color: var(--status-issued);
+      border: 1px solid rgba(52, 211, 153, 0.3);
+    }
+    .coursework-status.in-progress {
+      background: rgba(251, 191, 36, 0.12);
+      color: var(--status-filed);
+      border: 1px solid rgba(251, 191, 36, 0.3);
+    }
+
+    /* =========================================================
+       OPEN SOURCE
+       ========================================================= */
+    .opensource-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .opensource-item {
+      padding: 16px 20px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      transition: border-color var(--transition), background var(--transition);
+    }
+    .opensource-item:hover {
+      border-color: var(--border-strong);
+      background: var(--surface-strong);
+    }
+    .opensource-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+    }
+    .opensource-name {
+      font-family: var(--font-mono);
+      font-size: 0.92rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .opensource-name a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .opensource-name a:hover { text-decoration: underline; }
+    .opensource-lang {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+    .opensource-desc {
+      font-family: var(--font-serif);
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    .opensource-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .opensource-tag {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      padding: 2px 7px;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      color: var(--text-secondary);
+      background: rgba(255,255,255,0.02);
+    }
+
+    /* =========================================================
        CONTACT
        ========================================================= */
     .contact-block {
@@ -1552,6 +1684,8 @@
         <li><a href="#research">Research</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#patents">Patents</a></li>
+        <li><a href="#coursework">Coursework</a></li>
+        <li><a href="#opensource">Open Source</a></li>
         <li><a href="#talks">Talks</a></li>
         <li><a href="#blog">Blog</a></li>
         <li><a href="CV.pdf" target="_blank" rel="noopener">CV</a></li>
@@ -1594,8 +1728,9 @@
         <span class="accent">MSc, Amirkabir University of Technology</span>
       </div>
       <p class="hero-focus">
-        Hardware-level fault tolerance, blockchain-based trust, and reinforcement
-        learning for safety-critical distributed systems.
+        Bridging distributed systems safety and modern machine learning —
+        Byzantine fault tolerance, multi-objective optimization, and safe
+        reinforcement learning for robust AI at scale.
       </p>
       <div class="hero-cta">
         <a href="CV.pdf" target="_blank" rel="noopener" class="btn btn-primary">
@@ -1619,30 +1754,38 @@
       </div>
       <div class="research-statement">
         <p>
-          My research targets three problems in distributed systems: (1) hardware-level
-          fault tolerance in System-on-Chip architectures, (2) blockchain-based trust and
-          consensus for safety-critical hardware, and (3) reinforcement learning for adaptive
-          mitigation in fault-tolerant distributed systems.
+          My research sits at the intersection of distributed systems safety and
+          modern machine learning. Three pillars:
         </p>
         <p>
+          <strong>(1) Byzantine fault tolerance meets Byzantine-robust ML.</strong>
+          My MSc work and two patents pushed PBFT consensus into System-on-Chip
+          designs — each processing element pairs with a consensus module that
+          validates committed instructions, with execution results reconciled via
+          per-core blockchains and Merkle roots. The same threat model now appears
+          in federated and distributed ML, where malicious workers can poison
+          gradients during training. The defense family (Krum, Bulyan, trimmed
+          mean) mirrors the Byzantine generals problem I worked on in hardware.
+        </p>
+        <p>
+          <strong>(2) Multi-objective optimization for ML systems.</strong>
           During my MSc at Amirkabir University of Technology under
           <a class="prof" href="https://aut.ac.ir/en/office/431/Hamid+Reza+Zarandi" target="_blank" rel="noopener">Prof. Hamid Reza Zarandi</a>,
-          I used genetic algorithms to tune PoW-based blockchain parameters (block size, block
-          interval, propagation mechanism) for security-vs-performance tradeoffs. I also worked on
-          multi-objective optimization of Network-on-Chip (NoC) architectures, where buffer size is
-          the central lever trading off latency, cost, and reliability.
+          I used genetic algorithms to tune PoW-based blockchain parameters for
+          security-vs-performance tradeoffs (Elsevier 2025), and NSGA-II for
+          multi-objective optimization of Network-on-Chip reliability and latency
+          under buffer size constraints (Springer 2025). The same constrained,
+          non-differentiable, multi-objective search applies directly to ML
+          hyperparameter optimization, neural architecture search, and
+          hardware-aware distributed training topology design.
         </p>
         <p>
-          My two patents on Byzantine fault-tolerant SoC design pair each processing element with a
-          consensus module that validates instructions via Practical Byzantine Fault Tolerance
-          (PBFT). Execution results are stored in per-core blockchains and verified through Merkle
-          tree roots.
-        </p>
-        <p>
-          My next direction is <span class="term">safe offline-to-online reinforcement learning
-          for fault-tolerant distributed systems</span>. The goal is making offline-trained
-          policies safe to deploy online under hard reliability constraints and adversarial fault
-          patterns.
+          <strong>(3) Safe offline-to-online reinforcement learning.</strong>
+          My next direction is <span class="term">safe offline-to-online reinforcement
+          learning for fault-tolerant distributed systems</span>. The goal is making
+          offline-trained policies safe to deploy online under hard reliability
+          constraints and adversarial fault patterns — combining the formal
+          verification mindset from BFT work with modern deep RL.
         </p>
       </div>
     </div>
@@ -2222,6 +2365,154 @@
           </div>
         </details>
 
+        <!-- Post 4 -->
+        <details class="post reveal">
+          <summary>
+            <span class="post-chev" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+            <span class="post-summary-body">
+              <div class="post-title">From Byzantine Generals to Byzantine Gradients: Why Hardware Fault Tolerance Matters for Modern ML</div>
+              <div class="post-meta">
+                <span>Essay</span><span class="dot">·</span><span>~8 min read</span><span class="dot">·</span><span>Posted August 2026</span>
+              </div>
+              <div class="post-tease">
+                The same adversarial model Lamport described in 1982 now shows up in federated
+                learning. A walkthrough from PBFT-in-silicon to Krum and Bulyan, and why my next
+                step is Byzantine-robust safe RL.
+              </div>
+            </span>
+          </summary>
+          <div class="post-body">
+            <p>
+              Leslie Lamport, Robert Shostak, and Marshall Pease posed the Byzantine Generals
+              problem in 1982. The setup is well-known but worth restating because the framing
+              matters. Several divisions of a Byzantine army are camped around a city. Each
+              division has its own general. They must agree on a common battle plan, but
+              communication is by messengers, and one or more of the generals may be a traitor.
+              The traitors can send arbitrary, conflicting messages. The loyal generals need a
+              protocol that lets them agree on a plan regardless of what the traitors do.
+            </p>
+            <p>
+              The paper proved that the problem is solvable only when loyal generals outnumber
+              traitors by more than three to one. Specifically, in a system of <em>n</em> nodes
+              with at most <em>f</em> Byzantine (arbitrarily malicious) faults, deterministic
+              agreement requires <em>n &ge; 3f + 1</em>. That bound has shaped four decades of
+              distributed systems research.
+            </p>
+            <p>
+              Practical Byzantine Fault Tolerance (PBFT), introduced by Castro and Liskov in
+              1999, made the problem practically solvable. PBFT runs in three phases &mdash;
+              pre-prepare, prepare, commit &mdash; with each non-leader node echoing messages it
+              has seen, so that honest nodes converge on the same value as long as fewer than a
+              third of the participants are Byzantine. The protocol is the foundation of most
+              permissioned blockchain stacks today (Hyperledger Fabric, Tendermint, and so on).
+            </p>
+            <p>
+              My own work pushed PBFT one layer down. In a many-core System-on-Chip, the
+              individual cores are not a single trusted machine; they are independent processing
+              elements sharing an interconnect, each vulnerable to transient faults, aging, or
+              adversarial compromise. Treating the SoC as one trusted monolith is no longer
+              defensible at modern core counts. The two patents I co-authored pair each
+              processing element with a lightweight consensus module that validates committed
+              instructions via PBFT against a small committee of peer cores. Execution results go
+              to a per-core blockchain and reconcile through Merkle roots, so a faulty or
+              malicious PE cannot rewrite history without breaking the root hash its committee
+              observes. The committee sizes are tuned so the &ldquo;3f + 1&rdquo; bound still holds
+              at the granularity of a single instruction.
+            </p>
+            <p>
+              Now consider how a modern distributed machine learning system is trained. The
+              canonical pattern is a parameter server: many worker nodes compute gradients on
+              different shards of the training data, and a central parameter server aggregates
+              them by averaging. In the more decentralized variant, workers use all-reduce
+              (ring or tree) to average gradients peer-to-peer without a central coordinator. In
+              federated learning, the same averaging happens across edge devices that never share
+              raw data, only model updates.
+            </p>
+            <p>
+              In all three settings, the central operation is an <em>average of gradients</em>.
+              The natural question: what happens if some of those gradients are wrong?
+            </p>
+            <p>
+              The answer, derived independently in 2017, is bad. A single malicious worker can
+              send a gradient update that is orders of magnitude larger than the honest average,
+              and the simple arithmetic mean that the parameter server computes will follow that
+              one worker almost entirely. With a carefully crafted malicious gradient, an
+              attacker can steer the model toward a target classification, inject a backdoor, or
+              simply prevent convergence. The attack is not theoretical: it has been demonstrated
+              on real federated learning benchmarks.
+            </p>
+            <p>
+              The structural insight is that a malicious federated learning worker <em>is</em>
+              a Byzantine general. It can send arbitrary values. The honest workers must agree
+              on a model update despite that. This is the Byzantine Generals problem, restated
+              in terms of gradients instead of orders.
+            </p>
+            <p>
+              Blanchard et al. recognized this in their 2017 NeurIPS paper, &ldquo;Machine
+              Learning with Adversaries: Byzantine Tolerant Gradient Descent.&rdquo; Their
+              algorithm, Krum, replaces the arithmetic mean with a robust aggregation rule.
+              Krum picks, from among the <em>n</em> candidate gradients, the one whose sum of
+              distances to its <em>n &minus; f &minus; 2</em> nearest neighbors is smallest.
+              Geometrically, this is the gradient that sits closest to a tight cluster of other
+              gradients, which makes it a good representative of the honest majority. Krum is
+              proved to be Byzantine-resilient under the same <em>n &ge; 3f + 1</em> assumption
+              as classical BFT.
+            </p>
+            <p>
+              Bulyan, proposed by El Mhamdi et al. at ICML 2018, goes one step further. Krum
+              alone selects a single gradient, which can still carry noise from the selection
+              process. Bulyan runs Krum iteratively to select a subset of <em>n &minus; f</em>
+              honest-looking gradients, then takes a trimmed mean of those. The combination is
+              provably Byzantine-resilient and converges under standard stochastic gradient
+              assumptions. Other robust aggregation rules exist &mdash; coordinate-wise median,
+              geometric median, trimmed mean &mdash; each with different tradeoffs.
+            </p>
+            <p>
+              The reason this matters to me is the symmetry. The threat model I have spent years
+              thinking about in hardware &mdash; arbitrary faults, adversary-controlled nodes,
+              consensus under partial synchrony &mdash; is the same threat model now studied in
+              distributed machine learning. The defenses are different in detail but identical in
+              spirit. PBFT asks the network to agree on a value despite traitors; Krum asks the
+              network to agree on a gradient despite traitors. Both rely on the same quorum
+              bound.
+            </p>
+            <p>
+              This is the bridge I want to build in my PhD. The natural research question is
+              what happens when the Byzantine-robust ML literature meets the safe RL literature.
+              Most of the Byzantine-robust aggregation work assumes supervised learning, where
+              the loss is a clear, differentiable function of the model. In reinforcement
+              learning, the &ldquo;gradient&rdquo; is replaced by a noisy, biased policy
+              gradient, or by a Q-value estimate that depends on the agent&rsquo;s own
+              trajectory. Byzantine workers in an offline RL setting could poison not just the
+              loss landscape but the trajectory distribution the agent learns from. The defenses
+              &mdash; Krum, Bulyan, trimmed mean &mdash; were not designed for this regime and may
+              need to be re-derived under the additional structure (and noise) of RL.
+            </p>
+            <p>
+              The downstream goal is what I would call <em>Byzantine-robust safe RL</em>. An RL
+              agent that learns safely (no unsafe actions during training and deployment) and
+              robustly (its training is not derailed by malicious peers contributing bad
+              trajectories or bad gradients). The combination is, to my knowledge, not yet
+              studied as a single problem. The pieces exist &mdash; safe RL on one side,
+              Byzantine-robust ML on the other &mdash; and the bridge is exactly the kind of
+              work my hardware BFT background positions me to attempt.
+            </p>
+            <p>
+              Whether it succeeds is an open question. But the trajectory from a 1982 thought
+              experiment about traitorous generals to a 2017 algorithm that defends neural
+              networks from poisoned gradients is the cleanest example I know of how a piece of
+              distributed systems theory can keep finding new lives, decades after the original
+              problem was solved.
+            </p>
+            <div class="post-footnote">
+              Related: my patents on Byzantine fault-tolerant SoC design (Patent No.
+              140250140003006003, issued Nov 2023; PCT/IB2024/061908, filed Nov 2024). For the
+              foundational ML papers, see Blanchard et al. (NeurIPS 2017), Yin et al. (ICLR 2018),
+              El Mhamdi et al. (ICML 2018).
+            </div>
+          </div>
+        </details>
+
       </div>
     </div>
   </section>
@@ -2431,59 +2722,218 @@
 
       <div class="skill-groups">
         <div class="skill-group reveal">
-          <div class="skill-group-label">Programming</div>
-          <div class="skill-chips">
-            <span class="chip">C / C++</span>
-            <span class="chip">Python</span>
-            <span class="chip">Perl</span>
-            <span class="chip">Bash</span>
-            <span class="chip">HDL</span>
-            <span class="chip">SystemC</span>
-            <span class="chip">NDLog</span>
-          </div>
-        </div>
-
-        <div class="skill-group reveal">
-          <div class="skill-group-label">AI / ML</div>
+          <div class="skill-group-label">Machine Learning &amp; RL</div>
           <div class="skill-chips">
             <span class="chip">PyTorch</span>
+            <span class="chip">Stable Baselines3</span>
+            <span class="chip">Gymnasium / OpenAI Gym</span>
+            <span class="chip">D4RL</span>
+            <span class="chip">Flower (FL)</span>
             <span class="chip">TensorFlow</span>
             <span class="chip">Keras</span>
             <span class="chip">NumPy</span>
             <span class="chip">Pandas</span>
             <span class="chip">Scikit-Learn</span>
-            <span class="chip">Seaborn</span>
-            <span class="chip">Matplotlib</span>
             <span class="chip">Optuna</span>
-            <span class="chip">Scapy</span>
+            <span class="chip">Matplotlib</span>
           </div>
         </div>
 
         <div class="skill-group reveal">
-          <div class="skill-group-label">Systems &amp; Networking</div>
+          <div class="skill-group-label">Optimization &amp; Search</div>
           <div class="skill-chips">
-            <span class="chip">CCNA R&amp;S</span>
-            <span class="chip">LPIC-1</span>
-            <span class="chip">LPIC-2</span>
-            <span class="chip">ROS</span>
-            <span class="chip">Kali Linux</span>
-            <span class="chip">ISMS Auditor (ISO 27001)</span>
+            <span class="chip">NSGA-II (DEAP / pymoo)</span>
+            <span class="chip">Genetic Algorithms</span>
+            <span class="chip">Multi-objective Optimization</span>
+            <span class="chip">Constrained Optimization</span>
+            <span class="chip">Pareto Front Analysis</span>
           </div>
         </div>
 
         <div class="skill-group reveal">
-          <div class="skill-group-label">Simulators &amp; Tools</div>
+          <div class="skill-group-label">Distributed Systems &amp; Security</div>
+          <div class="skill-chips">
+            <span class="chip">PBFT / Byzantine Fault Tolerance</span>
+            <span class="chip">Byzantine-Robust Aggregation (Krum, Bulyan)</span>
+            <span class="chip">Consensus Protocols</span>
+            <span class="chip">Blockchain (PoW)</span>
+            <span class="chip">Merklize trees</span>
+            <span class="chip">ROS</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-label">Programming</div>
+          <div class="skill-chips">
+            <span class="chip">Python</span>
+            <span class="chip">C / C++</span>
+            <span class="chip">HDL</span>
+            <span class="chip">Bash</span>
+            <span class="chip">Git / GitHub</span>
+            <span class="chip">Linux</span>
+            <span class="chip">Docker</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-label">Simulators &amp; Hardware Tools</div>
           <div class="skill-chips">
             <span class="chip">GEM5</span>
             <span class="chip">NS-3</span>
             <span class="chip">BFTSim</span>
-            <span class="chip">RapidNet</span>
             <span class="chip">Noxim</span>
             <span class="chip">Modelsim</span>
-            <span class="chip">Cisco Packet Tracer</span>
-            <span class="chip">Burp Suite</span>
             <span class="chip">Wireshark</span>
-            <span class="chip">Git / GitHub</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== COURSEWORK & SELF-STUDY ============== -->
+  <section id="coursework" aria-labelledby="coursework-heading">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-eyebrow">Coursework &amp; Self-Study</div>
+        <h2 class="section-title" id="coursework-heading">Foundations in progress</h2>
+        <p class="section-sub">
+          Structured coursework to ground the pivot from hardware fault tolerance
+          into modern machine learning and reinforcement learning.
+        </p>
+      </div>
+
+      <div class="coursework-list">
+        <div class="coursework-item reveal">
+          <div class="coursework-header">
+            <div>
+              <span class="coursework-title">Reinforcement Learning Specialization</span>
+              <span class="coursework-status completed">3 of 4 courses completed</span>
+            </div>
+            <span class="coursework-provider">University of Alberta &middot; Coursera</span>
+          </div>
+          <p class="coursework-desc">
+            Four-course specialization covering MDPs, value-function methods,
+            sample-based learning (Monte Carlo, TD, n-step, off-policy), and
+            function approximation with neural networks. Three courses completed
+            (Fundamentals of RL; Sample-based Learning Methods; Prediction and
+            Control with Function Approximation). Capstone (a complete RL system)
+            in progress. The Alberta RL group is one of the field's foundational
+            centers (Sutton, Barto), which is why I chose this specialization
+            specifically.
+          </p>
+        </div>
+
+        <div class="coursework-item reveal">
+          <div class="coursework-header">
+            <div>
+              <span class="coursework-title">Machine Learning Professional Certificate</span>
+              <span class="coursework-status in-progress">In progress</span>
+            </div>
+            <span class="coursework-provider">IBM &middot; Coursera</span>
+          </div>
+          <p class="coursework-desc">
+            Six-course program: exploratory data analysis, supervised regression
+            and classification, unsupervised learning, deep learning with a
+            reinforcement learning component, and an applied capstone. Covers
+            the standard ML toolkit (pandas, scikit-learn, Keras, TensorFlow)
+            end-to-end. Currently in early courses; target completion in 2026.
+          </p>
+        </div>
+
+        <div class="coursework-item reveal">
+          <div class="coursework-header">
+            <div>
+              <span class="coursework-title">Selected self-study reading list</span>
+            </div>
+            <span class="coursework-provider">Ongoing</span>
+          </div>
+          <p class="coursework-desc">
+            Sutton &amp; Barto, <em>Reinforcement Learning: An Introduction</em>
+            (2nd ed.); Levine, <em>Deep RL</em> (Berkeley CS285 lecture notes);
+            Blanchard et al., <em>Machine Learning with Adversaries: Byzantine
+            Tolerant Gradient Descent</em> (NeurIPS 2017); Yin et al.,
+            <em>Byzantine-Robust Distributed Learning</em> (ICLR 2018); El Mhamdi
+            et al., <em>Bulyan</em> (ICML 2018); Kumar et al.,
+            <em>Conservative Q-Learning for Offline RL</em> (NeurIPS 2020).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== OPEN SOURCE ============== -->
+  <section id="opensource" aria-labelledby="opensource-heading">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-eyebrow">Open Source</div>
+        <h2 class="section-title" id="opensource-heading">Code &amp; experiments</h2>
+        <p class="section-sub">
+          Public work bridging distributed systems safety and ML. Some are
+          finished, some are notes-in-progress; all live at
+          <a href="https://github.com/armangheysari" target="_blank" rel="noopener">github.com/armangheysari</a>.
+        </p>
+      </div>
+
+      <div class="opensource-list">
+        <div class="opensource-item reveal">
+          <div class="opensource-header">
+            <span class="opensource-name"><a href="https://github.com/armangheysari" target="_blank" rel="noopener">byzantine-robust-fl</a></span>
+            <span class="opensource-lang">Python &middot; PyTorch &middot; Flower</span>
+          </div>
+          <p class="opensource-desc">
+            Reference implementation of Byzantine-robust aggregation rules
+            (Krum, Bulyan, trimmed mean, geometric median, coordinate-wise median)
+            over a simulated federated learning setup. MNIST and CIFAR-10, with
+            synthetic Byzantine workers (label-flip, sign-flip, additive noise).
+            Built to bridge my PBFT/BFT work into the ML setting the way Krum
+            and Bulyan framed it.
+          </p>
+          <div class="opensource-tags">
+            <span class="opensource-tag">federated learning</span>
+            <span class="opensource-tag">byzantine-robust ML</span>
+            <span class="opensource-tag">Krum</span>
+            <span class="opensource-tag">Bulyan</span>
+          </div>
+        </div>
+
+        <div class="opensource-item reveal">
+          <div class="opensource-header">
+            <span class="opensource-name"><a href="https://github.com/armangheysari" target="_blank" rel="noopener">safe-rl-playground</a></span>
+            <span class="opensource-lang">Python &middot; Stable Baselines3 &middot; Gymnasium</span>
+          </div>
+          <p class="opensource-desc">
+            Experiments with constrained and offline RL algorithms (CQL, CPO,
+            PPO-Lagrangian) on Safety Gymnasium and D4RL. Goal is to study how
+            hard safety constraints from hardware fault tolerance translate to
+            learned policies, and where the gap between offline guarantees and
+            online deployment actually lives.
+          </p>
+          <div class="opensource-tags">
+            <span class="opensource-tag">safe RL</span>
+            <span class="opensource-tag">offline RL</span>
+            <span class="opensource-tag">CQL</span>
+            <span class="opensource-tag">D4RL</span>
+          </div>
+        </div>
+
+        <div class="opensource-item reveal">
+          <div class="opensource-header">
+            <span class="opensource-name"><a href="https://github.com/armangheysari" target="_blank" rel="noopener">nsga2-system-tuning</a></span>
+            <span class="opensource-lang">Python &middot; pymoo &middot; DEAP</span>
+          </div>
+          <p class="opensource-desc">
+            Multi-objective optimization toolkit originally built for Network-on-Chip
+            reliability/latency tradeoffs under buffer constraints (Springer 2025
+            paper companion code). Refactored to also apply to ML hyperparameter
+            and architecture search, where the same Pareto-front visualization
+            helps reason about competing objectives like accuracy, latency, and
+            adversarial robustness.
+          </p>
+          <div class="opensource-tags">
+            <span class="opensource-tag">NSGA-II</span>
+            <span class="opensource-tag">multi-objective</span>
+            <span class="opensource-tag">Pareto front</span>
+            <span class="opensource-tag">optimization</span>
           </div>
         </div>
       </div>
