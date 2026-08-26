@@ -1770,7 +1770,7 @@
         <p>
           <strong>(2) Multi-objective optimization for ML systems.</strong>
           During my MSc at Amirkabir University of Technology under
-          <a class="prof" href="https://aut.ac.ir/en/office/431/Hamid+Reza+Zarandi" target="_blank" rel="noopener">Prof. Hamid Reza Zarandi</a>,
+          <a class="prof" href="https://aut.ac.ir/cv/2188/Hamid-Reza-Zarandi?slc_lang=en&&cv=2188&mod=scv" target="_blank" rel="noopener">Prof. Hamid Reza Zarandi</a>,
           I used genetic algorithms to tune PoW-based blockchain parameters for
           security-vs-performance tradeoffs (Elsevier 2025), and NSGA-II for
           multi-objective optimization of Network-on-Chip reliability and latency
@@ -2918,22 +2918,26 @@
 
         <div class="opensource-item reveal">
           <div class="opensource-header">
-            <span class="opensource-name"><a href="https://github.com/armangheysari" target="_blank" rel="noopener">nsga2-system-tuning</a></span>
-            <span class="opensource-lang">Python &middot; pymoo &middot; DEAP</span>
+            <span class="opensource-name"><a href="https://github.com/armangheysari" target="_blank" rel="noopener">rl-for-consensus</a></span>
+            <span class="opensource-lang">Python &middot; Stable Baselines3 &middot; custom PBFT simulator</span>
           </div>
           <p class="opensource-desc">
-            Multi-objective optimization toolkit originally built for Network-on-Chip
-            reliability/latency tradeoffs under buffer constraints (Springer 2025
-            paper companion code). Refactored to also apply to ML hyperparameter
-            and architecture search, where the same Pareto-front visualization
-            helps reason about competing objectives like accuracy, latency, and
-            adversarial robustness.
+            An RL agent that learns to tune PBFT parameters (committee size,
+            view-change timeout, reconfiguration threshold) in response to
+            observed fault patterns in a simulated Byzantine setting. The
+            environment wraps a small custom PBFT simulator (pre-prepare / prepare
+            / commit, view changes) with configurable Byzantine worker rate,
+            crash rate, and message delay. A PPO agent observes recent commit
+            latency and fault counters and picks committee configurations; the
+            reward is throughput under a hard safety constraint. Bridges the
+            hardware BFT work in my patents with the safe RL direction.
           </p>
           <div class="opensource-tags">
-            <span class="opensource-tag">NSGA-II</span>
-            <span class="opensource-tag">multi-objective</span>
-            <span class="opensource-tag">Pareto front</span>
-            <span class="opensource-tag">optimization</span>
+            <span class="opensource-tag">PBFT</span>
+            <span class="opensource-tag">Byzantine fault tolerance</span>
+            <span class="opensource-tag">safe RL</span>
+            <span class="opensource-tag">PPO</span>
+            <span class="opensource-tag">consensus</span>
           </div>
         </div>
       </div>
