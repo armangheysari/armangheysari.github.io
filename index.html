@@ -2877,16 +2877,39 @@
       <div class="opensource-list">
         <div class="opensource-item reveal">
           <div class="opensource-header">
-            <span class="opensource-name"><a href="https://github.com/armangheysari" target="_blank" rel="noopener">byzantine-robust-fl</a></span>
-            <span class="opensource-lang">Python &middot; PyTorch &middot; Flower</span>
+            <span class="opensource-name"><a href="https://github.com/armangheysari/rl-for-consensus" target="_blank" rel="noopener">rl-for-consensus</a></span>
+            <span class="opensource-lang">Python &middot; Stable Baselines3 &middot; custom PBFT simulator</span>
           </div>
           <p class="opensource-desc">
-            Reference implementation of Byzantine-robust aggregation rules
-            (Krum, Bulyan, trimmed mean, geometric median, coordinate-wise median)
-            over a simulated federated learning setup. MNIST and CIFAR-10, with
-            synthetic Byzantine workers (label-flip, sign-flip, additive noise).
-            Built to bridge my PBFT/BFT work into the ML setting the way Krum
-            and Bulyan framed it.
+            A PPO agent that learns to tune PBFT committee size and view-change
+            timeout under Byzantine faults. The simulator implements the
+            three-phase pre-prepare / prepare / commit protocol from Castro
+            and Liskov (OSDI 1999) with view changes and three attack patterns
+            (collusion, equivocation, timing). On the basic env, PPO reaches
+            0.90 commit rate versus 0.81 for the best static baseline. On the
+            advanced env with attacks enabled, PPO reaches 0.85 versus 0.80.
+          </p>
+          <div class="opensource-tags">
+            <span class="opensource-tag">PBFT</span>
+            <span class="opensource-tag">Byzantine fault tolerance</span>
+            <span class="opensource-tag">PPO</span>
+            <span class="opensource-tag">consensus</span>
+          </div>
+        </div>
+
+        <div class="opensource-item reveal">
+          <div class="opensource-header">
+            <span class="opensource-name"><a href="https://github.com/armangheysari/byzantine-robust-fl" target="_blank" rel="noopener">byzantine-robust-fl</a></span>
+            <span class="opensource-lang">Python &middot; PyTorch &middot; NumPy</span>
+          </div>
+          <p class="opensource-desc">
+            Reference implementations of Krum, Bulyan, trimmed mean, median,
+            and geometric median aggregation rules for federated learning.
+            Four Byzantine attack patterns: sign-flip, label-flip, additive
+            noise, and honest baseline. On MNIST with 20% Byzantine workers,
+            mean aggregation collapses to 11% accuracy under sign-flip while
+            Krum holds 77%, replicating the headline result from Blanchard
+            et al. (NeurIPS 2017).
           </p>
           <div class="opensource-tags">
             <span class="opensource-tag">federated learning</span>
@@ -2898,46 +2921,23 @@
 
         <div class="opensource-item reveal">
           <div class="opensource-header">
-            <span class="opensource-name"><a href="https://github.com/armangheysari" target="_blank" rel="noopener">safe-rl-playground</a></span>
+            <span class="opensource-name"><a href="https://github.com/armangheysari/safe-rl-playground" target="_blank" rel="noopener">safe-rl-playground</a></span>
             <span class="opensource-lang">Python &middot; Stable Baselines3 &middot; Gymnasium</span>
           </div>
           <p class="opensource-desc">
-            Experiments with constrained and offline RL algorithms (CQL, CPO,
-            PPO-Lagrangian) on Safety Gymnasium and D4RL. Goal is to study how
-            hard safety constraints from hardware fault tolerance translate to
-            learned policies, and where the gap between offline guarantees and
-            online deployment actually lives.
+            PPO, PPO-Lagrangian (constrained), and CQL (offline) on
+            safety-augmented Gymnasium environments. SafeCartPole adds a soft
+            cost on pole angle exceeding a threshold (0.05 rad). SafeMountainCar
+            adds a cost on velocity exceeding a threshold. The project studies
+            the trade-off between reward and safety: when they align, PPO
+            suffices. When they conflict, PPO-Lagrangian becomes necessary.
+            CQL trains offline on a random-policy dataset.
           </p>
           <div class="opensource-tags">
             <span class="opensource-tag">safe RL</span>
-            <span class="opensource-tag">offline RL</span>
+            <span class="opensource-tag">PPO-Lagrangian</span>
             <span class="opensource-tag">CQL</span>
-            <span class="opensource-tag">D4RL</span>
-          </div>
-        </div>
-
-        <div class="opensource-item reveal">
-          <div class="opensource-header">
-            <span class="opensource-name"><a href="https://github.com/armangheysari" target="_blank" rel="noopener">rl-for-consensus</a></span>
-            <span class="opensource-lang">Python &middot; Stable Baselines3 &middot; custom PBFT simulator</span>
-          </div>
-          <p class="opensource-desc">
-            An RL agent that learns to tune PBFT parameters (committee size,
-            view-change timeout, reconfiguration threshold) in response to
-            observed fault patterns in a simulated Byzantine setting. The
-            environment wraps a small custom PBFT simulator (pre-prepare / prepare
-            / commit, view changes) with configurable Byzantine worker rate,
-            crash rate, and message delay. A PPO agent observes recent commit
-            latency and fault counters and picks committee configurations; the
-            reward is throughput under a hard safety constraint. Bridges the
-            hardware BFT work in my patents with the safe RL direction.
-          </p>
-          <div class="opensource-tags">
-            <span class="opensource-tag">PBFT</span>
-            <span class="opensource-tag">Byzantine fault tolerance</span>
-            <span class="opensource-tag">safe RL</span>
-            <span class="opensource-tag">PPO</span>
-            <span class="opensource-tag">consensus</span>
+            <span class="opensource-tag">offline RL</span>
           </div>
         </div>
       </div>
